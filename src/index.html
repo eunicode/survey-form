@@ -6,125 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Feedback Form</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header>
-        <h1 id="title">Feedback Form</h1>
-    </header>
-    <main>
-        <p id="description">Let me know how I can improve as a developer</p>
-        <form id="survey-form">
-            <label for="name" id="name-label">Name: (Can enter "Anonymous")</label>
-            <input type="text" id="name" placeholder="Enter name" required>
+    <div class="grid-container">
+        <header>
+            <h1 id="title">Feedback Form</h1>
+        </header>
+        <main>
+            <p id="description">Let me know how I can improve as a developer!</p>
+            <form id="survey-form">
+                <label for="name" id="name-label">Name: (Can enter "Anonymous")</label>
+                <input type="text" id="name" placeholder="Enter name" required>
 
-            <label for="email" id="email-label">Email: (Can enter "Anonymous")</label>
-            <input type="email" id="email" placeholder="Enter email" required>
+                <label for="email" id="email-label">Email: (Can enter "Anonymous")</label>
+                <input type="email" id="email" placeholder="Enter email" required>
 
-            <label for="dropdown">Job role: </label>
-            <select id="dropdown" name="surveyee_job">
-                <optgroup label="Web">
-                    <option value="frontend_developer">Front-End Developer</option>
-                    <option value=backend_developer>Back-End Developer</option>
-                    <option value="php_developer">PHP Developer</option>
-                    <option value="rails_developer">Rails Developer</option>
-                    <option value="wordpress_developer">WordPress Developer</option>
-                    <option value="web_designer">Web Designer</option>
-                </optgroup>
-                <optgroup label="Mobile">
-                    <option value="android_developer">Android Developer</option>
-                    <option value="ios_developer">iOS Developer</option>
-                    <option value="mobile_designer">Mobile Designer</option>
-                </optgroup>
-            </select>
+                <label for="dropdown">Job role: </label>
+                <select id="dropdown" name="surveyee_job">
+                    <optgroup label="Web">
+                        <option value="frontend_developer">Front-End Developer</option>
+                        <option value=backend_developer>Back-End Developer</option>
+                        <option value="php_developer">PHP Developer</option>
+                        <option value="rails_developer">Rails Developer</option>
+                        <option value="wordpress_developer">WordPress Developer</option>
+                        <option value="web_designer">Web Designer</option>
+                    </optgroup>
+                    <optgroup label="Mobile">
+                        <option value="android_developer">Android Developer</option>
+                        <option value="ios_developer">iOS Developer</option>
+                        <option value="mobile_designer">Mobile Designer</option>
+                    </optgroup>
+                </select>
 
-            <label>Would you advance me to the next round (e.g. onsite)?</label>
-            <input type="radio" id="pass" name="advance" value="yes">
-            <label for="pass">Yes</label>
-            <input type="radio" id="fail" name="advance" value="no">
-            <label for="fail">No</label>
+                <label>Would you advance me to the next round (e.g. onsite)?</label>
+                <input type="radio" id="pass" name="advance" value="yes">
+                <label for="pass">Yes</label>
+                <input type="radio" id="fail" name="advance" value="no">
+                <label for="fail">No</label>
 
-            <label for="">On a scale of 1-5, 5 being excellent, how are my technical skills?</label>
-            <select id="technical" name="my_tech_skills">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+                <label for="technical">On a scale of 1-5, 5 being excellent, how are my technical skills?</label>
+                <select id="technical" name="my_tech_skills">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
 
-            <label for"">On a scale of 1-5, how is my problem solving ability?</label>
-            <select id="problem" name="my_problem_skills">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+                <label for="problem">On a scale of 1-5, how is my problem solving ability?</label>
+                <select id="problem" name="my_problem_skills">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
 
-            <label for"">On a scale of 1-5, how is my communication ability?</label>
-            <select id="communication" name="my_comm_skills">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+                <label for "communication">On a scale of 1-5, how is my communication ability?</label>
+                <select id="communication" name="my_comm_skills">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
 
-            <label for="number" id="number-label">On a scale of 1-10, 10 being highly prepared, how prepared am I for a junior developer role?</label>
-            <input type="number" id="number" placeholder="Enter rating" min="1" max="10">
+                <label for="number" id="number-label">On a scale of 1-10, 10 being highly prepared, how prepared am I for a junior developer role?</label>
+                <input type="number" id="number" placeholder="Enter rating" min="1" max="10">
 
-            <label>Which area, in your opinion, should be more focused on?</label>
-            <input type="radio" id="vs_projects" value="vs_projects" name="versus_1">Projects (contribute to open source, side projects)
-            <input type="radio" id="vs_tech" value="vs_tech" name="versus_1">Technical interview skills (algorithms)
-          
-            <label>Which area, in your opinion, is more important to master?</label>
-            <input type="radio" id="html_css" value="html_css" name="versus_2">HTML & CSS
-            <input type="radio" id="js" value="js" name="versus_2">
+                <label>Which area, in your opinion, should be more focused on?</label>
+                <input type="radio" id="vs_projects" value="vs_projects" name="versus_1">Projects (contribute to open source, side projects)
+                <input type="radio" id="vs_tech" value="vs_tech" name="versus_1">Technical interview skills (algorithms)
 
-            <label for="technologies">Which technologies do your company use? (Check all that apply):</label>
-            Languages
-            <input type="checkbox" name="lang" value="1">JavaScript
-            <input type="checkbox" name="lang" value="2">SQL
-            <input type="checkbox" name="lang" value="3">PHP
-            <input type="checkbox" name="lang" value="4">Java
-            <input type="checkbox" name="lang" value="5">Python
-            <input type="checkbox" name="lang" value="6">C#
-            <input type="checkbox" name="lang" value="7">C++
-            <input type="checkbox" name="lang" value="8">C
-            <input type="checkbox" name="lang" value="9">TypeScript
-            <input type="checkbox" name="lang" value="10">Ruby
-            <input type="checkbox" name="lang" value="11">Swift
-            Frameworks & Libraries
-            <input type="checkbox" name="frameworks" value="1">Node.js
-            <input type="checkbox" name="frameworks" value="2">Angular
-            <input type="checkbox" name="frameworks" value="3">React
-            <input type="checkbox" name="frameworks" value="4">Jquery
-            <input type="checkbox" name="frameworks" value="5">Django
-            Databases
-            <input type="checkbox" name="databases" value="1">MySQL
-            <input type="checkbox" name="databases" value="2">SQL Server 
-            <input type="checkbox" name="databases" value="3">PostgreSQL
-            <input type="checkbox" name="databases" value="4">MongoDB
-            <input type="checkbox" name="databases" value="5">SQLite
-            Tools
-            <input type="checkbox" name="tools" value="1">npm
-            <input type="checkbox" name="tools" value="2">Webpack
-            <input type="checkbox" name="tools" value="3">Gulp
-            <input type="checkbox" name="tools" value="4">Grunt
+                <label>Which area, in your opinion, is more important to master?</label>
+                <input type="radio" id="html_css" value="html_css" name="versus_2">HTML & CSS
+                <input type="radio" id="js" value="js" name="versus_2">
 
-            <label for="">Help me get better!</label>
-            <textarea></textarea>
+                <label for="technologies">Which technologies do your company use? (Check all that apply):</label>
+                Languages
+                <input type="checkbox" name="lang" value="1">JavaScript
+                <input type="checkbox" name="lang" value="2">SQL
+                <input type="checkbox" name="lang" value="3">PHP
+                <input type="checkbox" name="lang" value="4">Java
+                <input type="checkbox" name="lang" value="5">Python
+                <input type="checkbox" name="lang" value="6">C#
+                <input type="checkbox" name="lang" value="7">C++
+                <input type="checkbox" name="lang" value="8">C
+                <input type="checkbox" name="lang" value="9">TypeScript
+                <input type="checkbox" name="lang" value="10">Ruby
+                <input type="checkbox" name="lang" value="11">Swift Frameworks & Libraries
+                <input type="checkbox" name="frameworks" value="1">Node.js
+                <input type="checkbox" name="frameworks" value="2">Angular
+                <input type="checkbox" name="frameworks" value="3">React
+                <input type="checkbox" name="frameworks" value="4">Jquery
+                <input type="checkbox" name="frameworks" value="5">Django Databases
+                <input type="checkbox" name="databases" value="1">MySQL
+                <input type="checkbox" name="databases" value="2">SQL Server
+                <input type="checkbox" name="databases" value="3">PostgreSQL
+                <input type="checkbox" name="databases" value="4">MongoDB
+                <input type="checkbox" name="databases" value="5">SQLite Tools
+                <input type="checkbox" name="tools" value="1">npm
+                <input type="checkbox" name="tools" value="2">Webpack
+                <input type="checkbox" name="tools" value="3">Gulp
+                <input type="checkbox" name="tools" value="4">Grunt
 
-            <button type="submit" id="submit">Submit</button>
+                <label for="">Help me get better!</label>
+                <textarea></textarea>
 
-        </form>
-    </main>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+                <button type="submit" id="submit">Submit</button>
+
+            </form>
+        </main>
+    </div>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 
 </html>
 <!-- To Do: 
 Implement star ratings
+
 Try to make this form submit somewhere by learning a server-side language such as Ruby, PHP, or Python
+
+More questions: 
+https://medium.freecodecamp.org/stack-overflow-2018-developer-survey-faac8d3eb357
+Learning resources you would recommend
+What size company are you?
 -->

@@ -1,0 +1,18 @@
+@supports (grid-area: auto) {
+    .grid-container {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "main"
+    }
+
+    form {
+        display: grid; /* Makes inline children (like <input>) into block elements */
+    }
+}
+
+/* To Do 
+Stretch div.grid to full width when browser width is narrow */
