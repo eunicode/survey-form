@@ -1,3 +1,8 @@
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -13,11 +18,10 @@ body {
 header h1 {
     /* margin-top: 0; */
     color: #4bc970;
+    text-align: center;
 }
 
 .grid-container {
-    max-width: 50rem; 
-    margin: 0 auto;
     padding: 20px; /* Don't see horizontal padding (it's "absorbed") when viewport
     is wide. Do see it when viewport is narrow. Probably bc items in .grid-container,
     `header` and `main`, are centered with `justify-items: center`. 
@@ -45,7 +49,8 @@ select {
     margin-bottom: 30px;
     /* outline: 0; */
     padding: 15px;
-    /* width: 100%; */
+    /* Makes input elements full-width, fallback for browsers without grid support */
+    width: 100%;
     background-color: #e8eeef;
     color: #8a97a0; /* dropdown text, arrows*/
     /* box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset; */
@@ -74,9 +79,27 @@ button {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
-/* GRID */
+/*--------------------------------------------------------------
+Basic responsive layout for all browsers:
+--------------------------------------------------------------*/
+
+.grid-container {
+    max-width: 50em; 
+    margin: 10px auto;
+}
+
+/* Descendant combinator + universal selector
+Make inline input elements block elements */
+form * {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
 
 @supports (grid-area: auto) {
     /* No real point in making .grid-container a grid. It only makes `header` and
@@ -92,13 +115,34 @@ button {
     }
 
     form {
-        display: grid; /* Makes inline children (like <input>) into block elements */
+        /* Makes inline children (like <input>) into full-width block elements */
+        /* display: grid;   */
         /* Implicit */
         /* grid-template-columns: 1fr; */
         /* grid-template-rows: auto; */
     }
 
 }
+
+/*--------------------------------------------------------------
+Media queries:
+--------------------------------------------------------------*/
+
+/* Prevent form from getting too narrow
+If screen <= 480px, then form's minimum width is 400px. 
+
+Edit: This is unnecessary. Chrome's minimum width is 400px, so we don't have to
+worry about the form getting too narrow.
+Also, since we want to implement a mobile first approach, we should have the 
+default width be narrow, and then scale up the width on wider viewports. 
+Also, mobile screens can be narrower than 400px, so if the form's min-width is 
+400px, the form would overflow. 300px is a good minimum width. */
+
+/* @media screen and (max-width: 480px) {
+    .grid-container {
+      min-width: 400px;
+    }
+} */
 
 /* To Do 
 Stretch div.grid to full width when browser width is narrow 
