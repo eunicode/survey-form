@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Feedback Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -14,9 +15,13 @@
         <header>
             <h1 id="title">Feedback Form</h1>
         </header>
+
         <main>
             <p id="description">Let me know how I can improve as a developer!</p>
+           
             <form id="survey-form">
+                <fieldset>
+                <legend>Your basic info</legend>
                 <label for="name" id="name-label">Name: (Can enter "Anonymous")</label>
                 <input type="text" id="name" placeholder="Enter name" required>
 
@@ -39,7 +44,10 @@
                         <option value="mobile_designer">Mobile Designer</option>
                     </optgroup>
                 </select>
+                </fieldset> 
 
+                <fieldset>
+                <legend>Your assessment</legend>
                 <label>Would you advance me to the next round (e.g. onsite)?</label>
                 <input type="radio" id="pass" name="advance" value="yes">
                 <label for="pass">Yes</label>
@@ -75,52 +83,64 @@
 
                 <label for="number" id="number-label">On a scale of 1-10, 10 being highly prepared, how prepared am I for a junior developer role?</label>
                 <input type="number" id="number" placeholder="Enter rating" min="1" max="10">
+                </fieldset>
 
-                <label>Which area, in your opinion, should be more focused on?</label>
-                <input type="radio" id="vs_projects" value="vs_projects" name="versus_1">Projects (contribute to open source, side projects)
-                <input type="radio" id="vs_tech" value="vs_tech" name="versus_1">Technical interview skills (algorithms)
+                <fieldset>
+                    <legend>Your recommendations</legend>
+                <label>Which area, in your opinion, is more important to work on?</label>
+                <input type="radio" id="vs_projects" value="vs_projects" name="versus_1"><label for="vs projects">Projects (contribute to open source, side projects)</label>
+                <input type="radio" id="vs_tech" value="vs_tech" name="versus_1"><label for="vs_tech">Technical interview skills (algorithms)</label>
 
                 <label>Which area, in your opinion, is more important to master?</label>
-                <input type="radio" id="html_css" value="html_css" name="versus_2">HTML & CSS
-                <input type="radio" id="js" value="js" name="versus_2">
+                <input type="radio" id="html_css" value="html_css" name="versus_2"><label for="html_css">HTML & CSS</label>
+                <input type="radio" id="js" value="js" name="versus_2"><label for="js">JavaScript</label>
 
                 <label for="technologies">Which technologies do your company use? (Check all that apply):</label>
-                Languages
-                <input type="checkbox" name="lang" value="1">JavaScript
-                <input type="checkbox" name="lang" value="2">SQL
-                <input type="checkbox" name="lang" value="3">PHP
-                <input type="checkbox" name="lang" value="4">Java
-                <input type="checkbox" name="lang" value="5">Python
-                <input type="checkbox" name="lang" value="6">C#
-                <input type="checkbox" name="lang" value="7">C++
-                <input type="checkbox" name="lang" value="8">C
-                <input type="checkbox" name="lang" value="9">TypeScript
-                <input type="checkbox" name="lang" value="10">Ruby
-                <input type="checkbox" name="lang" value="11">Swift Frameworks & Libraries
-                <input type="checkbox" name="frameworks" value="1">Node.js
-                <input type="checkbox" name="frameworks" value="2">Angular
-                <input type="checkbox" name="frameworks" value="3">React
-                <input type="checkbox" name="frameworks" value="4">Jquery
-                <input type="checkbox" name="frameworks" value="5">Django Databases
-                <input type="checkbox" name="databases" value="1">MySQL
-                <input type="checkbox" name="databases" value="2">SQL Server
-                <input type="checkbox" name="databases" value="3">PostgreSQL
-                <input type="checkbox" name="databases" value="4">MongoDB
-                <input type="checkbox" name="databases" value="5">SQLite Tools
-                <input type="checkbox" name="tools" value="1">npm
-                <input type="checkbox" name="tools" value="2">Webpack
-                <input type="checkbox" name="tools" value="3">Gulp
-                <input type="checkbox" name="tools" value="4">Grunt
 
-                <label for="">Help me get better!</label>
-                <textarea></textarea>
+                <label>Languages</label>
+                <input type="checkbox" name="lang" value="1" id="lang_1"><label for="lang_1">JavaScript</label>
+                <input type="checkbox" name="lang" value="2" id="lang_2"><label for="lang_2">SQL</label>
+                <input type="checkbox" name="lang" value="3" id="lang_3"><label>PHP</label>
+                <input type="checkbox" name="lang" value="4" id="lang_4"><label for="lang_4">Java</label>
+                <input type="checkbox" name="lang" value="5" id="lang_5"><label>Python</label>
+                <input type="checkbox" name="lang" value="6" id="lang_6"><label>C#</label>
+                <input type="checkbox" name="lang" value="7" id="lang_7"><label for="lang-7">C++</label>
+                <input type="checkbox" name="lang" value="8" id="lang_8"><label for="lang_8">C</label>
+                <input type="checkbox" name="lang" value="9" id="lang_9"><label for="lang_9">TypeScript</label>
+                <input type="checkbox" name="lang" value="10" id="lang_10"><label for="lang_10">Ruby</label>
+                <input type="checkbox" name="lang" value="11" id="lang_11"><label for="lang_11">Swift</label> 
+                
+                <label>Frameworks & Libraries</label>
+                <input type="checkbox" name="frameworks" value="1"/>
+                <input type="checkbox" name="frameworks" value="2">
+                <input type="checkbox" name="frameworks" value="3">
+                <input type="checkbox" name="frameworks" value="4">
+                <input type="checkbox" name="frameworks" value="5">
 
+                <label>Databases</label>
+                <input type="checkbox" name="databases" value="1">
+                <input type="checkbox" name="databases" value="2">
+                <input type="checkbox" name="databases" value="3">
+                <input type="checkbox" name="databases" value="4">
+                <input type="checkbox" name="databases" value="5"> 
+                
+                <label>Tools</label>
+                <input type="checkbox" name="tools" value="1">
+                <input type="checkbox" name="tools" value="2">
+                <input type="checkbox" name="tools" value="3">
+                <input type="checkbox" name="tools" value="4">
+
+                <label for="comments">Help me get better!</label>
+                <textarea id="comments"></textarea>
+                </fieldset>
+                
                 <button type="submit" id="submit">Submit</button>
 
             </form>
         </main>
     </div>
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
@@ -133,4 +153,6 @@ More questions:
 https://medium.freecodecamp.org/stack-overflow-2018-developer-survey-faac8d3eb357
 Learning resources you would recommend
 What size company are you?
+
+Generate checkboxes with JavaScript
 -->

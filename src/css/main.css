@@ -21,6 +21,11 @@ header h1 {
     text-align: center;
 }
 
+main p {
+    padding-bottom: 10px; /* Can observe collapsing margins here */
+    padding-left: 1.1em; /* Same as fieldset padding */
+}
+
 .grid-container {
     padding: 20px; /* Don't see horizontal padding (it's "absorbed") when viewport
     is wide. Do see it when viewport is narrow. Probably bc items in .grid-container,
@@ -33,8 +38,19 @@ header h1 {
     background: #f4f7f8;
 }
 
+fieldset {
+    margin-bottom: 10px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin: 15px 0;
+}
+
 label {
     margin-bottom: 8px;
+    display: block;
 }
 
 input[type="text"],
@@ -54,11 +70,13 @@ select {
     background-color: #e8eeef;
     color: #8a97a0; /* dropdown text, arrows*/
     /* box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset; */
+    /* display: block; */
 }
 
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 4px 8px 0;
+  /* display: inline-block; */
 }
 
 select {
@@ -93,9 +111,9 @@ Basic responsive layout for all browsers:
 
 /* Descendant combinator + universal selector
 Make inline input elements block elements */
-form * {
+/* form * {
     display: block;
-}
+} */
 
 /*--------------------------------------------------------------
 CSS Grid layout for modern browsers:
@@ -116,7 +134,7 @@ CSS Grid layout for modern browsers:
 
     form {
         /* Makes inline children (like <input>) into full-width block elements */
-        /* display: grid;   */
+        display: grid;  
         /* Implicit */
         /* grid-template-columns: 1fr; */
         /* grid-template-rows: auto; */
