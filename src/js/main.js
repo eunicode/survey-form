@@ -13,9 +13,15 @@ console.log('toolsInputs: ', toolsInputs);
 
 function createLabel(elm, i, textArray) {
    let label = document.createElement('label');
-   label.for = elm.id;
+   // Give each input a unique id
+   elm.id = `${elm.name}_${i}`
+   // Give each label a `for` attribute that matches its corresponding input's `id` attribute. 
+   label.htmlFor = elm.id;
+   label.className = 'inline';
    label.textContent = textArray[i];
    elm.after(label);
+   const br = document.createElement('br');
+   label.after(br);
 }
 
 function iterate(elmArray, textArray) {
