@@ -1,6 +1,6 @@
 # Survey Form
 
-### Description
+## Description
 
 This [survey form](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form) project is part of freeCodeCamp's [*Responsive Web Design*](https://learn.freecodecamp.org/) curriculum. 
 
@@ -24,20 +24,20 @@ User Story #13: Inside the form element, I can select a field from one or more g
 - User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
 - User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
 
-### Tech Stack
+## Tech Stack
 
 - Gulp
 - HTML
 - CSS
 - JavaScript
 
-### Lessons Learned
+## Lessons Learned
 
 - Responsive single-column layout with CSS Grid and CSS feature queries with @support (progressive enhancement)
 - Client-side form validation with HTML5 form validation features.
 - Improve form field accessibility with semantic HTML such as `label` and `fieldset`.
 - Programmatically generate DOM elements and manipulate the DOM with the DOM API
 
-### Attribution
+## Attribution
 
 [Normalize](https://necolas.github.io/normalize.css/) - Normalize.css makes "browsers render elements more consistently and in line with modern standards".
