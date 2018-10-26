@@ -50,11 +50,17 @@ legend {
 
 label {
     margin-bottom: 8px;
+    margin-top: 10px;
     display: block;
 }
 
 .inline {
     display: inline;
+}
+
+.spacing-bottom {
+    padding-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 input[type="text"],
