@@ -45,3 +45,48 @@ It fulfills the following user stories:
 ## Attribution
 
 - [Normalize](https://necolas.github.io/normalize.css/) - Normalize.css makes "browsers render elements more consistently and in line with modern standards".
+
+
+## Set up
+
+Download/clone repo
+
+Move to project folder
+
+```
+cd <file path>
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Run the default gulp command to start the live server
+
+```
+gulp
+```
+
+When finished developing, stop the server
+
+```
+Ctrl + C
+```
+
+To deploy to GitHub Pages, run npm script
+
+```
+npm run deploy
+```
+
+To audit/update npm packages
+
+```
+npm audit
+npm audit fix
+
+npm update
+npm outdated
+```
